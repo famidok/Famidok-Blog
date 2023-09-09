@@ -10,19 +10,13 @@
         <h1><a href="/">Famidok Blog</a></h1>
     </header>
 
-    <article>
-        <h2><a href="">Famidok first post</a></h2>
-        <p>Lock and Key</p>
-        <time>Published: 29.11.2021, 11:29</time>
-    </article>
-
-    <article>
-        <h2><a href="">Yılbaşında neler yapıcaksınız?</a></h2>
-        <p>+Iıııı.. Vallahi çocuhlar bir şeyler yöpmeş..
-            <br>
-            -Yılbaşı zaten gevur icadı sende haciğ oldun bunlara cevap veriyosun.
-        </p>
-        <time>Published: 09.09.2023, 18.35</time>
-    </article>
+    {% for post in posts %}
+        <article>
+            <h2><a href ="">{{ post.title }}</a></h2>
+            <time>Published: {{ post.published_date }}</time>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+    
 </body>
 </html>
