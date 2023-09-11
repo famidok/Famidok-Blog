@@ -12,8 +12,14 @@
 </head>
 <body>
     <header class="page-header">
-      <div class="container">
-          <h1><a href="/">Famidok Blog</a></h1>
+      <div class="container">   
+               
+        <h1><a href="/">Famidok Blog</a></h1>
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu">
+            {% include './icons/add-square.svg' %}
+        </a>
+    {% endif %}           
       </div>
     </header>
     <main class="container">

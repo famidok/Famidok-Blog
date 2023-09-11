@@ -59,6 +59,7 @@ h4 {
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+   
 }
 
 .post {
@@ -85,4 +86,9 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: pink;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-right: 50px;
 }
